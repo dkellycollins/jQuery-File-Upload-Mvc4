@@ -114,9 +114,10 @@
 @section styles {
     @Styles.Render("~/content/jQueryFileUpload")
     <!-- CSS adjustments for browsers with JavaScript disabled -->
-    <noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
+    <noscript>@Styles.Render("~/content/jQueryFileUpload-noscript")</noscript>
 }
 @section scripts {
+    @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/angularjs")
     <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
     <script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>

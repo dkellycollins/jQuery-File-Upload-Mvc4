@@ -28,7 +28,7 @@ namespace jQuery_File_Upload_Mvc4.Controllers
         public ActionResult BasicUpload()
         {
             return View();
-        }]
+        }
 
         [HttpPost]
         public ActionResult BasicUpload(BasicFileUpload file)
@@ -103,7 +103,7 @@ namespace jQuery_File_Upload_Mvc4.Controllers
         }
 
         [HttpPost]
-        public ActionResult ChunkedUpload(ChunkedFileUplaod file)
+        public ActionResult ChunkedUpload(ChunkedFileUpload file)
         {
             throw new NotImplementedException();
         }

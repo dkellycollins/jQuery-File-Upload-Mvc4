@@ -134,6 +134,7 @@
     <Compile Include="Models\BasicFileUpload.cs" />
     <Compile Include="Models\BasicPlusFileUpload.cs" />
     <Compile Include="Models\BasicPlusUIFileUpload.cs" />
+    <Compile Include="Models\ChunkedFileUpload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -558,6 +559,7 @@
     <Content Include="Views\Upload\BasicPlusUpload.cshtml" />
     <Content Include="Views\Upload\BasicPlusUIUpload.cshtml" />
     <Content Include="Views\Upload\AngularJSUpload.cshtml" />
+    <Content Include="Views\Upload\ChunkedUpload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

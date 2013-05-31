@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @RenderSection("styles", required: false)
-    @Styles.Render("~/Content/jQueryFileUpload")
     @Styles.Render("~/Content/bootstrap")
     @Styles.Render("~/Content/css")
 </head>
@@ -31,6 +30,9 @@
                     <li class="@("AngularJSUpload" == action ? "active" : "")">
                         @Html.ActionLink("AngualarJS", "AngularJSUpload", "Upload")
                     </li>
+                    <li class="@("ChunkedUpload" == action ? "active" : "")">
+                        @Html.ActionLink("Chunked File", "ChunkedUpload", "Upload")
+                    </li>
                  }
             </ul>
             <blockquote>
@@ -43,7 +45,6 @@
         @RenderBody()
     </div>
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryui")
     @RenderSection("scripts", required: false)
 </body>
 </html>

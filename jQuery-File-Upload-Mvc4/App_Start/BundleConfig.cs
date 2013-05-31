@@ -94,6 +94,9 @@ namespace jQuery_File_Upload_Mvc4
                 "~/Content/style.css"
                 ));
 
+            bundles.Add(new StyleBundle("~/content/jQueryFileUpload-noscript").Include(
+                "~/Content/jquery.fileupload-ui-noscript.css"));
+
             //Angular bundles
 
             bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(

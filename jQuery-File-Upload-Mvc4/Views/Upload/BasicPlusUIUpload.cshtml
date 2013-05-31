@@ -88,7 +88,7 @@
 @section styles {
     @Styles.Render("~/content/jQueryFileUpload")
     <!-- CSS adjustments for browsers with JavaScript disabled -->
-    <noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
+    <noscript>@Styles.Render("~/content/jQueryFileUpload-noscript")</noscript>
 }
 @section scripts {
     <!-- The template to display files available for upload -->
@@ -159,6 +159,7 @@
             </tr>
         {% } %}
     </script>
+    @Scripts.Render("~/bundles/jqueryui")
     <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
     <script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>
     <!-- The Canvas to Blob plugin is included for image resizing functionality -->
