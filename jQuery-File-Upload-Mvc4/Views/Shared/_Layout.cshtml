@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @RenderSection("styles", required: false)
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>jQuery File Upload Demo</h1>
+            <h2 class="lead">@ViewBag.DemoVersion version</h2>
+
+            <ul class="nav nav-tabs">
+                @{
+                    string action = ViewContext.Controller.ValueProvider.GetValue("action").RawValue.ToString();    
+        
+                    <li class="@("BasicUpload" == action ? "active" : "")">
+                        @Html.ActionLink("Basic", "BasicUpload", "Upload")
+                    </li>
+                    <li class="@("BasicPlusUpload" == action ? "active" : "")">
+                        @Html.ActionLink("Basic Plus", "BasicPlusUpload", "Upload")
+                    </li>
+                    <li class="@("BasicPlusUIUpload" == action ? "active" : "")">
+                        @Html.ActionLink("Basic Plus UI", "BasicPlusUIUpload", "Upload")
+                    </li>
+                    <li class="@("AngularJSUpload" == action ? "active" : "")">
+                        @Html.ActionLink("AngualarJS", "AngularJSUpload", "Upload")
+                    </li>
+                 }
+            </ul>
+            <blockquote>
+                File Upload widget with multiple file selection, drag&drop support and progress bar for jQuery.
+                Supports cross-domain, chunked and resumable file uploads.
+                Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.
+            </blockquote>
+        </div>
+
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
